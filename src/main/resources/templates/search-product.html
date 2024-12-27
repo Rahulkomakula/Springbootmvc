@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Get element by id</title>
+	</head>
+</html>
+<body>
+	<form th:action="@{searchById}" method="post">
+		<label>Enter Id</label>
+		<input type="number" name="id">
+		<button type="submit">Search</button>
+	</form>
+	<div th:if="${product !=null}">
+	<h3>Product Details</h3>
+	<p><strong>Id: </strong><span th:text="${product.id}"></span></p>	
+	<p><strong>Name: </strong><span th:text="${product.name}"></span></p>	
+	<p><strong>MadeIn: </strong><span th:text="${product.madeIn}"></span></p>	
+	<p><strong>quantity: </strong><span th:text="${product.quantity}"></span></p>	
+	<p><strong>price: </strong><span th:text="${product.price}"></span></p>	
+	<p><strong>discountrate: </strong><span th:text="${product.discountrate}"></span></p>	
+	<p><strong>taxRate: </strong><span th:text="${product.taxRate}"></span></p>	
+	<p><strong>discount_price: </strong><span th:text="${product.discount_price}"></span></p>	
+	<p><strong>offerPrice: </strong><span th:text="${product.offerPrice}"></span></p>	
+	<p><strong>finalPrice: </strong><span th:text="${product.finalPrice}"></span></p>	
+	<p><strong>stockValue: </strong><span th:text="${product.stockValue}"></span></p>	
+
+
+	</div>
+	<div th:if="${product ==null}">
+		<p>No product found with the given id</p>
+	</div>
+</body>

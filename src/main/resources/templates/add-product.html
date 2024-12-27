@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formdata</title>
+	
+</head>
+<body>
+<fieldset>
+	<form th:action="@{/saveproducts}" method="post">
+	<h1 style="color: chocolate;">Product details</h1>
+	<label>Name:</label>
+	<input type="text" name="name"><p></p>
+	<label>Brand:</label>
+	<input type="text" name="brand"><br><p></p>
+	<label>MaidIn:</label>
+	<input type="text" name="madeIn"><br><p></p>
+	<label>Quantity:</label>
+	<input type="number" name="quantity"><br><p></p>
+	<label>Price:</label>
+	<input type="number" name="price"><br><p></p>
+	<label>Discountrate:</label>
+	<input type="number" name="discountrate"><br><br>
+	<button type="submit">SaveProducts</button>&emsp;
+	<button type="reset">Reset</button>
+</form>
+</fieldset>
+</body>
+</html>
